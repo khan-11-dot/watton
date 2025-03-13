@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Team - Watton Tobacco Company</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+        :root {
+            --neon-blue: #00ffff;
+            --neon-purple: #ff00ff;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.9) !important;
+            border-bottom: 1px solid var(--neon-blue);
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        .navbar-brand, .nav-link {
+            color: var(--neon-blue) !important;
+            text-shadow: 0 0 10px var(--neon-blue);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: var(--neon-purple) !important;
+            text-shadow: 0 0 20px var(--neon-purple);
+        }
+
+        .page-header {
+            background: var(--card-bg);
+            border-bottom: 2px solid var(--neon-blue);
+            box-shadow: 0 0 30px var(--neon-blue);
+            margin-bottom: 3rem;
+            padding: 4rem 0;
+        }
+
+        .page-header h1 {
+            color: var(--neon-blue);
+            text-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        .page-header .lead {
+            color: var(--neon-purple);
+            text-shadow: 0 0 10px var(--neon-purple);
+        }
+
+        .team-member-card {
+            background: var(--card-bg) !important;
+            border: 1px solid var(--neon-blue) !important;
+            box-shadow: 0 0 15px var(--neon-blue);
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .team-member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px var(--neon-purple);
+            border-color: var(--neon-purple) !important;
+        }
+
+        .team-member-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid var(--neon-blue);
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 20px var(--neon-blue);
+            transition: all 0.3s ease;
+        }
+
+        .team-member-card:hover img {
+            border-color: var(--neon-purple);
+            box-shadow: 0 0 30px var(--neon-purple);
+        }
+
+        .team-member-card .card-body {
+            padding: 1.5rem;
+        }
+
+        .team-member-card .card-title {
+            color: var(--neon-blue);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .team-member-card .card-text {
+            color: #ffffff;
+            opacity: 0.9;
+        }
+
+        .team-member-card .social-links {
+            margin-top: 1rem;
+        }
+
+        .team-member-card .social-links a {
+            color: var(--neon-purple);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            text-shadow: 0 0 5px var(--neon-purple);
+            transition: all 0.3s ease;
+        }
+
+        .team-member-card .social-links a:hover {
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+            transform: scale(1.2);
+        }
+
+        .designation {
+            color: var(--neon-purple);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 5px var(--neon-purple);
+        }
+
+        footer {
+            background: var(--card-bg);
+            border-top: 1px solid var(--neon-blue);
+            box-shadow: 0 0 20px var(--neon-blue);
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        footer h5 {
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        footer p, footer a {
+            color: var(--neon-purple) !important;
+            text-shadow: 0 0 5px var(--neon-purple);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--neon-blue) !important;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .social-links a {
+            color: var(--neon-blue);
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            text-shadow: 0 0 10px var(--neon-blue);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--neon-purple);
+            text-shadow: 0 0 20px var(--neon-purple);
+            transform: scale(1.2);
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            pointer-events: none;
+            background: var(--neon-blue);
+            box-shadow: 0 0 20px var(--neon-blue),
+                        0 0 40px var(--neon-blue);
+            animation: pulse 1s infinite;
+            z-index: 9999;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.5); opacity: 0.4; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+    
+        .location-list {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: var(--card-bg) !important;
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 20px var(--neon-blue);
+            padding: 20px 0;
+            z-index: 1000;
+        }
+
+        .location-list h2 {
+            color: var(--neon-blue);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .list-group-item {
+            background: transparent !important;
+            border: 1px solid var(--neon-blue) !important;
+            color: var(--neon-blue) !important;
+            text-shadow: 0 0 5px var(--neon-blue);
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .list-group-item:hover {
+            background: var(--neon-blue) !important;
+            color: var(--dark-bg) !important;
+            transform: translateX(10px);
+        }
+
+        .list-group-item i {
+            margin-right: 10px;
+            color: var(--neon-purple);
+        }
+    
+    </style>
+<link href="css/cursor-effects.css" rel="stylesheet"/></head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div class="container">
+<a class="navbar-brand" href="./index.html">Watton Tobacco</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="./index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./hand-stem.html">Hand Stem</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./labor-registration.html">Labor Registration</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./registrations.html">Registrations</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#" onclick="toggleList('warehousesList')">Warehouses</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#" onclick="toggleList('centersList')">Purchase Centers</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./admin/index.html">Admin</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./staff/index.html">Staff</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./creator.html">Developer</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./contact.html">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Warehouses List -->
+<div class="location-list" id="warehousesList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Warehouses</h2>
+<div class="list-group">
+<a class="list-group-item" href="./warehouses/ismaila.html">
+<i class="fas fa-warehouse"></i> Ismaila Warehouse
+                    </a>
+<a class="list-group-item" href="./warehouses/mansabdar.html">
+<i class="fas fa-warehouse"></i> Mansabdar Warehouse
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Centers List -->
+<div class="location-list" id="centersList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Purchase Centers</h2>
+<div class="list-group">
+<a class="list-group-item" href="./centers/sher-garh.html">
+<i class="fas fa-store"></i> Sher Garh Center
+                    </a>
+<a class="list-group-item" href="./centers/maira.html">
+<i class="fas fa-store"></i> Maira Center
+                    </a>
+<a class="list-group-item" href="./centers/aman-abad.html">
+<i class="fas fa-store"></i> Aman Abad Center
+                    </a>
+<a class="list-group-item" href="./centers/bunir.html">
+<i class="fas fa-store"></i> Bunir Center
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Warehouses List -->
+<div class="location-list" id="warehousesList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Warehouses</h2>
+<div class="list-group">
+<a class="list-group-item" href=".warehouses/ismaila.html">
+<i class="fas fa-warehouse"></i> Ismaila Warehouse
+                    </a>
+<a class="list-group-item" href=".warehouses/mansabdar.html">
+<i class="fas fa-warehouse"></i> Mansabdar Warehouse
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Centers List -->
+<div class="location-list" id="centersList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Purchase Centers</h2>
+<div class="list-group">
+<a class="list-group-item" href=".centers/sher-garh.html">
+<i class="fas fa-store"></i> Sher Garh Center
+                    </a>
+<a class="list-group-item" href=".centers/maira.html">
+<i class="fas fa-store"></i> Maira Center
+                    </a>
+<a class="list-group-item" href=".centers/aman-abad.html">
+<i class="fas fa-store"></i> Aman Abad Center
+                    </a>
+<a class="list-group-item" href=".centers/bunir.html">
+<i class="fas fa-store"></i> Bunir Center
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Warehouses List -->
+<div class="location-list" id="warehousesList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Warehouses</h2>
+<div class="list-group">
+<a class="list-group-item" href=".warehouses/ismaila.html">
+<i class="fas fa-warehouse"></i> Ismaila Warehouse
+                    </a>
+<a class="list-group-item" href=".warehouses/mansabdar.html">
+<i class="fas fa-warehouse"></i> Mansabdar Warehouse
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Centers List -->
+<div class="location-list" id="centersList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Purchase Centers</h2>
+<div class="list-group">
+<a class="list-group-item" href=".centers/sher-garh.html">
+<i class="fas fa-store"></i> Sher Garh Center
+                    </a>
+<a class="list-group-item" href=".centers/maira.html">
+<i class="fas fa-store"></i> Maira Center
+                    </a>
+<a class="list-group-item" href=".centers/aman-abad.html">
+<i class="fas fa-store"></i> Aman Abad Center
+                    </a>
+<a class="list-group-item" href=".centers/bunir.html">
+<i class="fas fa-store"></i> Bunir Center
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Warehouses List -->
+<div class="location-list" id="warehousesList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Warehouses</h2>
+<div class="list-group">
+<a class="list-group-item" href="./warehouses/ismaila.html">
+<i class="fas fa-warehouse"></i> Ismaila Warehouse
+                    </a>
+<a class="list-group-item" href="./warehouses/mansabdar.html">
+<i class="fas fa-warehouse"></i> Mansabdar Warehouse
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Centers List -->
+<div class="location-list" id="centersList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Purchase Centers</h2>
+<div class="list-group">
+<a class="list-group-item" href="./centers/aman-abad.html">
+<i class="fas fa-store"></i> Aman Abad Center
+                    </a>
+<a class="list-group-item" href="./centers/bunir.html">
+<i class="fas fa-store"></i> Bunir Center
+                    </a>
+<a class="list-group-item" href="./centers/maira.html">
+<i class="fas fa-store"></i> Maira Center
+                    </a>
+<a class="list-group-item" href="./centers/sher-garh.html">
+<i class="fas fa-store"></i> Sher Garh Center
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Header -->
+<header class="page-header py-5 mt-5">
+<div class="container">
+<div class="row">
+<div class="col-12 text-center">
+<h1 class="display-4">Our Team</h1>
+<p class="lead">Meet the dedicated professionals behind Watton Tobacco Company</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Leadership Team -->
+<section class="leadership py-5">
+<div class="container">
+<h2 class="text-center mb-5">Leadership Team</h2>
+<div class="row">
+<div class="col-md-4 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body text-center">
+<div class="staff-image mb-3">
+<img alt="Khalid Parvez Manga" class="rounded-circle img-fluid" src="images/staff/owner.jpg"/>
+</div>
+<h3>Khalid Parvez Manga</h3>
+<p class="text-muted">Owner</p>
+<p class="staff-bio">With decades of experience in the tobacco industry, Khalid Parvez Manga leads Watton Tobacco Company with vision and expertise.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body text-center">
+<div class="staff-image mb-3">
+<img alt="Shanazar Khan" class="rounded-circle img-fluid" src="images/staff/senior-manager.jpg"/>
+</div>
+<h3>Shanazar Khan</h3>
+<p class="text-muted">Senior Manager</p>
+<p class="staff-bio">Overseeing daily operations and strategic planning, Shanazar ensures smooth functioning across all facilities.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body text-center">
+<div class="staff-image mb-3">
+<img alt="Masood Shah" class="rounded-circle img-fluid" src="images/staff/junior-manager.jpg"/>
+</div>
+<h3>Masood Shah</h3>
+<p class="text-muted">Junior Manager</p>
+<p class="staff-bio">Coordinating between departments and implementing operational improvements across the company.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Staff Members -->
+<section class="key-staff py-5 bg-light">
+<div class="container">
+<h2 class="text-center mb-5">Key Staff Members</h2>
+<div class="row">
+<div class="col-md-4 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body text-center">
+<h3>Raaj Wali Khan</h3>
+<p class="text-muted">Senior Manager</p>
+<p>Specializing in quality control and warehouse management.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body text-center">
+<h3>Bakht Zada</h3>
+<p class="text-muted">Operations Coordinator</p>
+<p>Ensuring smooth coordination between purchase centers and warehouses.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body text-center">
+<h3>Tariq Shah</h3>
+<p class="text-muted">Logistics Manager</p>
+<p>Managing transportation and delivery operations.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="row mt-4">
+<div class="col-md-4 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body text-center">
+<h3>Muhammad Sher</h3>
+<p class="text-muted">Quality Assurance</p>
+<p>Maintaining high standards across all products.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body text-center">
+<h3>Bilal Ahmad</h3>
+<p class="text-muted">IT Specialist</p>
+<p>Managing digital infrastructure and website maintenance.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body text-center">
+<h3>Muhammad Imran</h3>
+<p class="text-muted">Cooking Department Head</p>
+<p>Overseeing tobacco processing and preparation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer py-4">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<h5>Contact Us</h5>
+<p>Aman Abad, Yaar Hussain<br/>Phone: [Your Phone]<br/>Email: info@wattontobacco.com</p>
+</div>
+<div class="col-md-4">
+<h5>Quick Links</h5>
+<ul class="list-unstyled">
+<li><a href="index.html">Home</a></li>
+<li><a href="headquarters.html">Headquarters</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="col-md-4">
+<h5>Follow Us</h5>
+<div class="social-links">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+</div>
+</div>
+</div>
+<div class="row mt-3">
+<div class="col-12 text-center">
+<p class="mb-0">© 2025 Watton Tobacco Company. All rights reserved.</p>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/cursor-effects.js"></script>
+<script src="js/main.js"></script>
+<script>
+        function toggleList(listId) {
+            document.querySelectorAll('.location-list').forEach(list => {
+                if (list.id !== listId) {
+                    list.style.display = 'none';
+                }
+            });
+            const list = document.getElementById(listId);
+            list.style.display = list.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Close lists when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.location-list') && !event.target.closest('.nav-link')) {
+                document.querySelectorAll('.location-list').forEach(list => {
+                    list.style.display = 'none';
+                });
+            }
+        });
+    </script>
+<script src="js/cursor-effects.js"></script></body>
+</html>

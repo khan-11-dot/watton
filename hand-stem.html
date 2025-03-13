@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hand Stem Labor - Watton Tobacco Company</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+        :root {
+            --neon-green: #00ff00;
+            --neon-blue: #00ffff;
+            --neon-pink: #ff00ff;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+        }
+
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                        url('stem.jpeg') center/cover fixed;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.9) !important;
+            border-bottom: 1px solid var(--neon-green);
+        }
+
+        .navbar-brand, .nav-link {
+            color: var(--neon-green) !important;
+            text-shadow: 0 0 10px var(--neon-green);
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: var(--neon-pink) !important;
+            text-shadow: 0 0 10px var(--neon-pink),
+                       0 0 20px var(--neon-pink),
+                       0 0 30px var(--neon-pink);
+            transition: all 0.3s ease;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px var(--neon-green);
+            margin-top: 80px;
+            border: 1px solid var(--neon-green);
+        }
+
+        .content-section h2 {
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+            border-bottom: 2px solid var(--neon-blue);
+        }
+
+        .card {
+            background: var(--card-bg) !important;
+            border: 1px solid var(--neon-blue) !important;
+            color: white !important;
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px var(--neon-blue);
+        }
+
+        .btn-primary {
+            background: var(--dark-bg) !important;
+            color: var(--neon-green) !important;
+            border: 1px solid var(--neon-green) !important;
+            text-shadow: 0 0 5px var(--neon-green);
+            box-shadow: 0 0 10px var(--neon-green);
+        }
+
+        .btn-primary:hover {
+            background: var(--neon-green) !important;
+            color: var(--dark-bg) !important;
+            box-shadow: 0 0 20px var(--neon-green);
+        }
+
+        .requirements-list li:before {
+            color: var(--neon-green);
+        }
+
+        i.fas {
+            color: var(--neon-green);
+            text-shadow: 0 0 5px var(--neon-green);
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            pointer-events: none;
+            background: var(--neon-green);
+            box-shadow: 0 0 20px var(--neon-green),
+                       0 0 40px var(--neon-green),
+                       0 0 60px var(--neon-green);
+            animation: pulse 1s infinite;
+            z-index: 9999;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.5); opacity: 0.4; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            border-top: 1px solid var(--neon-green);
+            color: var(--neon-green);
+            text-shadow: 0 0 5px var(--neon-green);
+        }
+
+        footer a {
+            color: var(--neon-blue) !important;
+            text-shadow: 0 0 5px var(--neon-blue);
+        }
+
+        footer a:hover {
+            color: var(--neon-pink) !important;
+            text-shadow: 0 0 10px var(--neon-pink);
+        }
+    
+        .location-list {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: var(--dark-bg);
+            border-bottom: 1px solid var(--neon-green);
+            padding: 20px 0;
+            z-index: 1000;
+        }
+
+        .location-list h2 {
+            color: var(--neon-green);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px var(--neon-green);
+        }
+
+        .list-group-item {
+            background: transparent;
+            border: 1px solid var(--neon-green);
+            color: var(--neon-green);
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .list-group-item:hover {
+            background: var(--neon-green);
+            color: var(--dark-bg);
+            transform: translateX(10px);
+            text-decoration: none;
+        }
+    
+    </style>
+<link href="css/cursor-effects.css" rel="stylesheet"/></head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div class="container">
+<a class="navbar-brand" href="./index.html">Watton Tobacco</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="./index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./hand-stem.html">Hand Stem</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./labor-registration.html">Labor Registration</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./registrations.html">Registrations</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#" onclick="toggleList('warehousesList')">Warehouses</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#" onclick="toggleList('centersList')">Purchase Centers</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./admin/index.html">Admin</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./staff/index.html">Staff</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./creator.html">Developer</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./contact.html">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Warehouses List -->
+<div class="location-list" id="warehousesList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Warehouses</h2>
+<div class="list-group">
+<a class="list-group-item" href="./warehouses/ismaila.html">
+<i class="fas fa-warehouse"></i> Ismaila Warehouse
+                    </a>
+<a class="list-group-item" href="./warehouses/mansabdar.html">
+<i class="fas fa-warehouse"></i> Mansabdar Warehouse
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Centers List -->
+<div class="location-list" id="centersList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Purchase Centers</h2>
+<div class="list-group">
+<a class="list-group-item" href="./centers/sher-garh.html">
+<i class="fas fa-store"></i> Sher Garh Center
+                    </a>
+<a class="list-group-item" href="./centers/maira.html">
+<i class="fas fa-store"></i> Maira Center
+                    </a>
+<a class="list-group-item" href="./centers/aman-abad.html">
+<i class="fas fa-store"></i> Aman Abad Center
+                    </a>
+<a class="list-group-item" href="./centers/bunir.html">
+<i class="fas fa-store"></i> Bunir Center
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Warehouses List -->
+<div class="location-list" id="warehousesList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Warehouses</h2>
+<div class="list-group">
+<a class="list-group-item" href=".warehouses/ismaila.html">
+<i class="fas fa-warehouse"></i> Ismaila Warehouse
+                    </a>
+<a class="list-group-item" href=".warehouses/mansabdar.html">
+<i class="fas fa-warehouse"></i> Mansabdar Warehouse
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Centers List -->
+<div class="location-list" id="centersList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Purchase Centers</h2>
+<div class="list-group">
+<a class="list-group-item" href=".centers/sher-garh.html">
+<i class="fas fa-store"></i> Sher Garh Center
+                    </a>
+<a class="list-group-item" href=".centers/maira.html">
+<i class="fas fa-store"></i> Maira Center
+                    </a>
+<a class="list-group-item" href=".centers/aman-abad.html">
+<i class="fas fa-store"></i> Aman Abad Center
+                    </a>
+<a class="list-group-item" href=".centers/bunir.html">
+<i class="fas fa-store"></i> Bunir Center
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Warehouses List -->
+<div class="location-list" id="warehousesList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Warehouses</h2>
+<div class="list-group">
+<a class="list-group-item" href=".warehouses/ismaila.html">
+<i class="fas fa-warehouse"></i> Ismaila Warehouse
+                    </a>
+<a class="list-group-item" href=".warehouses/mansabdar.html">
+<i class="fas fa-warehouse"></i> Mansabdar Warehouse
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Centers List -->
+<div class="location-list" id="centersList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Purchase Centers</h2>
+<div class="list-group">
+<a class="list-group-item" href=".centers/sher-garh.html">
+<i class="fas fa-store"></i> Sher Garh Center
+                    </a>
+<a class="list-group-item" href=".centers/maira.html">
+<i class="fas fa-store"></i> Maira Center
+                    </a>
+<a class="list-group-item" href=".centers/aman-abad.html">
+<i class="fas fa-store"></i> Aman Abad Center
+                    </a>
+<a class="list-group-item" href=".centers/bunir.html">
+<i class="fas fa-store"></i> Bunir Center
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Warehouses List -->
+<div class="location-list" id="warehousesList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Warehouses</h2>
+<div class="list-group">
+<a class="list-group-item" href="./warehouses/ismaila.html">
+<i class="fas fa-warehouse"></i> Ismaila Warehouse
+                    </a>
+<a class="list-group-item" href="./warehouses/mansabdar.html">
+<i class="fas fa-warehouse"></i> Mansabdar Warehouse
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Centers List -->
+<div class="location-list" id="centersList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Purchase Centers</h2>
+<div class="list-group">
+<a class="list-group-item" href="./centers/aman-abad.html">
+<i class="fas fa-store"></i> Aman Abad Center
+                    </a>
+<a class="list-group-item" href="./centers/bunir.html">
+<i class="fas fa-store"></i> Bunir Center
+                    </a>
+<a class="list-group-item" href="./centers/maira.html">
+<i class="fas fa-store"></i> Maira Center
+                    </a>
+<a class="list-group-item" href="./centers/sher-garh.html">
+<i class="fas fa-store"></i> Sher Garh Center
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="center-hero hand-stem-hero">
+<div class="container">
+<div class="row">
+<div class="col-12 text-center">
+<h1 class="display-4 text-shadow">Hand Stem Processing</h1>
+<p class="lead text-shadow">Quality tobacco processing through skilled hand stemming</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Labor Information -->
+<section class="labor-info py-5">
+<div class="container">
+<div class="content-section">
+<h2 class="text-center mb-4">Hand Stem Process</h2>
+<div class="row">
+<div class="col-md-6 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body">
+<h2>Work Details</h2>
+<ul class="list-unstyled">
+<li class="mb-3"><i class="fas fa-money-bill me-2"></i> <strong>Payment Rate:</strong> 16 PKR per kg</li>
+<li class="mb-3"><i class="fas fa-calendar me-2"></i> <strong>Payment Schedule:</strong> Every 15 days (Pandrey)</li>
+<li class="mb-3"><i class="fas fa-clock me-2"></i> <strong>Working Hours:</strong> 8:00 AM - 5:00 PM</li>
+<li class="mb-3"><i class="fas fa-calendar-times me-2"></i> <strong>Closed On:</strong> Friday</li>
+<li class="mb-3"><i class="fas fa-users me-2"></i> <strong>Work Type:</strong> Daily Labor</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-6 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body">
+<h2>Requirements</h2>
+<ul class="requirements-list list-unstyled">
+<li class="mb-3"><i class="fas fa-check me-2"></i> No prior experience needed</li>
+<li class="mb-3"><i class="fas fa-check me-2"></i> On-site training provided</li>
+<li class="mb-3"><i class="fas fa-check me-2"></i> Bring your CNIC</li>
+<li class="mb-3"><i class="fas fa-check me-2"></i> All ages welcome</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex justify-content-center mt-4">
+<a class="btn btn-primary btn-lg" href="labor-registration.html">Register as Labor</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Information -->
+<section class="process-info py-5 bg-light">
+<div class="container">
+<div class="content-section">
+<h2 class="text-center mb-4">Work Process</h2>
+<div class="row">
+<div class="col-md-4 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body">
+<h3>Step 1: Registration</h3>
+<ul class="list-unstyled">
+<li class="mb-3"><i class="fas fa-id-card me-2"></i> Bring your CNIC</li>
+<li class="mb-3"><i class="fas fa-file-alt me-2"></i> Fill simple form</li>
+<li class="mb-3"><i class="fas fa-user-plus me-2"></i> Get worker ID</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-4 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body">
+<h3>Step 2: Work</h3>
+<ul class="list-unstyled">
+<li class="mb-3"><i class="fas fa-hands me-2"></i> Hand stem tobacco</li>
+<li class="mb-3"><i class="fas fa-balance-scale me-2"></i> Weigh processed tobacco</li>
+<li class="mb-3"><i class="fas fa-check-double me-2"></i> Quality check</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-4 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body">
+<h3>Step 3: Payment</h3>
+<ul class="list-unstyled">
+<li class="mb-3"><i class="fas fa-calculator me-2"></i> Calculate kg processed</li>
+<li class="mb-3"><i class="fas fa-money-bill-wave me-2"></i> 16 PKR per kg</li>
+<li class="mb-3"><i class="fas fa-calendar-alt me-2"></i> Payment every 15 days (Pandrey)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits -->
+<section class="benefits py-5">
+<div class="container">
+<div class="content-section">
+<h2 class="text-center mb-4">Why Work With Us</h2>
+<div class="row">
+<div class="col-md-6 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body">
+<h3>Worker Benefits</h3>
+<ul class="list-unstyled">
+<li class="mb-3"><i class="fas fa-money-bill-wave me-2"></i> Daily payments</li>
+<li class="mb-3"><i class="fas fa-coffee me-2"></i> Free tea provided</li>
+<li class="mb-3"><i class="fas fa-shield-alt me-2"></i> Safe work environment</li>
+<li class="mb-3"><i class="fas fa-first-aid me-2"></i> First aid available</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-6 mb-4">
+<div class="card h-100 fade-in">
+<div class="card-body">
+<h3>Additional Information</h3>
+<ul class="list-unstyled">
+<li class="mb-3"><i class="fas fa-clock me-2"></i> Flexible hours</li>
+<li class="mb-3"><i class="fas fa-users me-2"></i> Friendly environment</li>
+<li class="mb-3"><i class="fas fa-hand-holding-heart me-2"></i> Support provided</li>
+<li class="mb-3"><i class="fas fa-star me-2"></i> Performance bonuses</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-dark text-light py-4">
+<div class="container text-center">
+<p class="mb-0">
+                © 2025 Watton Tobacco Company. Developed by 
+                <a class="text-light text-decoration-none" href="creator.html">
+<strong>Bilal Ahmad</strong>
+</a>
+</p>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+        // Cursor tracking
+        const cursors = [];
+        const maxCursors = 10;
+
+        function createCursor(x, y) {
+            const cursor = document.createElement('div');
+            cursor.className = 'cursor-trail';
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+            document.body.appendChild(cursor);
+            return cursor;
+        }
+
+        document.addEventListener('mousemove', function(e) {
+            const cursor = createCursor(e.clientX, e.clientY);
+            cursors.push(cursor);
+
+            if (cursors.length > maxCursors) {
+                const oldCursor = cursors.shift();
+                oldCursor.remove();
+            }
+
+            setTimeout(() => {
+                cursor.remove();
+                const index = cursors.indexOf(cursor);
+                if (index > -1) {
+                    cursors.splice(index, 1);
+                }
+            }, 1000);
+        });
+    </script>
+<script>
+        function toggleList(listId) {
+            document.querySelectorAll('.location-list').forEach(list => {
+                if (list.id !== listId) {
+                    list.style.display = 'none';
+                }
+            });
+            const list = document.getElementById(listId);
+            list.style.display = list.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Close lists when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.location-list') && !event.target.closest('.nav-link')) {
+                document.querySelectorAll('.location-list').forEach(list => {
+                    list.style.display = 'none';
+                });
+            }
+        });
+    </script>
+<script src="js/cursor-effects.js"></script></body>
+</html>

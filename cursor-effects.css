@@ -1,0 +1,65 @@
+:root {
+    --neon-primary: #00ff9d;
+    --neon-secondary: #00ffee;
+}
+
+body {
+    cursor: default;
+}
+
+/* Glow effect cursor */
+.cursor-glow {
+    width: 24px;
+    height: 24px;
+    background: radial-gradient(circle, 
+        rgba(0, 255, 157, 0.3) 0%, 
+        rgba(0, 255, 238, 0.1) 50%, 
+        transparent 70%
+    );
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease;
+    mix-blend-mode: screen;
+}
+
+/* Custom cursor */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--neon-primary);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.2s;
+}
+
+.cursor-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--neon-secondary);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Only trail effect, keep default cursor */
+.cursor-trail {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, 
+        rgba(0, 255, 157, 0.7) 0%, 
+        rgba(0, 255, 238, 0.3) 50%, 
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    mix-blend-mode: screen;
+} 

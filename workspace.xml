@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f363c197-0010-4d4c-b508-2839a0608a14" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/OIP.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aman.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bilal-contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/centers/aman-abad.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/centers/maira.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/centers/sher-garh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/creator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hand-stem.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/headquarters.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/centers/aman-abad-center.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/centers/chota-buner-center.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/centers/maira-center.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/centers/sher-garh-center.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/headquarters.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/hero-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/staff/junior-manager.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/staff/owner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/staff/senior-manager.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/tobacco-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/warehouses/ismaila-warehouse.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/warehouses/mansabdar-warehouse.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/isma.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/janan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jjj.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labor-registration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maira.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qu.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registrations.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sher.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shiwa.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/staff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stem.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/warehouses/ismaila.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/warehouses/mansabdar.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2u5aK5ywE1YLxggf0IpqthBepEq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f363c197-0010-4d4c-b508-2839a0608a14" name="Changes" comment="" />
+      <created>1741540896132</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741540896132</updated>
+    </task>
+    <servers />
+  </component>
+</project>

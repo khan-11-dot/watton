@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mansabdar Warehouse - Watton Tobacco</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<style>
+        :root {
+            --neon-green: #00ff00;
+            --neon-blue: #00ffff;
+            --neon-pink: #ff00ff;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+        }
+
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('../qu.jpeg') center/cover fixed;
+            color: white;
+            min-height: 100vh;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.9) !important;
+            border-bottom: 1px solid var(--neon-green);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            color: var(--neon-green) !important;
+            text-shadow: 0 0 10px var(--neon-green);
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .navbar-brand:hover {
+            color: var(--neon-pink) !important;
+            text-shadow: 0 0 10px var(--neon-pink),
+                       0 0 20px var(--neon-pink),
+                       0 0 30px var(--neon-pink);
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-light {
+            border-color: var(--neon-blue) !important;
+            color: var(--neon-blue) !important;
+            text-shadow: 0 0 5px var(--neon-blue);
+        }
+
+        .btn-outline-light:hover {
+            background: var(--neon-blue) !important;
+            color: var(--dark-bg) !important;
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        .hero-section {
+            background: var(--card-bg);
+            border: 1px solid var(--neon-green);
+            box-shadow: 0 0 20px var(--neon-green);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title {
+            color: var(--neon-pink);
+            text-shadow: 0 0 20px var(--neon-pink);
+        }
+
+        .hero-subtitle {
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .stat-card {
+            background: var(--card-bg) !important;
+            border: 1px solid var(--neon-blue) !important;
+            color: white !important;
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px var(--neon-blue);
+        }
+
+        .center-card {
+            background: var(--card-bg) !important;
+            border: 1px solid var(--neon-green) !important;
+            color: white !important;
+            box-shadow: 0 0 15px var(--neon-green);
+        }
+
+        .center-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px var(--neon-green);
+        }
+
+        .card-header {
+            border-bottom: 1px solid var(--neon-green);
+            background: var(--dark-bg) !important;
+            color: var(--neon-green) !important;
+            text-shadow: 0 0 10px var(--neon-green);
+        }
+
+        .form-control {
+            background: var(--dark-bg);
+            border: 1px solid var(--neon-blue);
+            color: white;
+        }
+
+        .form-control:focus {
+            background: var(--dark-bg);
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 10px var(--neon-pink);
+            color: white;
+        }
+
+        .btn-success {
+            background: var(--dark-bg) !important;
+            color: var(--neon-green) !important;
+            border: 1px solid var(--neon-green) !important;
+            text-shadow: 0 0 5px var(--neon-green);
+            box-shadow: 0 0 10px var(--neon-green);
+        }
+
+        .btn-success:hover {
+            background: var(--neon-green) !important;
+            color: var(--dark-bg) !important;
+            box-shadow: 0 0 20px var(--neon-green);
+        }
+
+        .btn-danger {
+            background: var(--dark-bg) !important;
+            color: var(--neon-pink) !important;
+            border: 1px solid var(--neon-pink) !important;
+            text-shadow: 0 0 5px var(--neon-pink);
+            box-shadow: 0 0 10px var(--neon-pink);
+        }
+
+        .btn-danger:hover {
+            background: var(--neon-pink) !important;
+            color: var(--dark-bg) !important;
+            box-shadow: 0 0 20px var(--neon-pink);
+        }
+
+        .alert {
+            background: var(--dark-bg);
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            text-shadow: 0 0 5px var(--neon-blue);
+        }
+
+        .date-time {
+            color: var(--neon-blue);
+            text-shadow: 0 0 5px var(--neon-blue);
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            pointer-events: none;
+            background: var(--neon-green);
+            box-shadow: 0 0 20px var(--neon-green),
+                       0 0 40px var(--neon-green),
+                       0 0 60px var(--neon-green);
+            animation: pulse 1s infinite;
+            z-index: 9999;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.5); opacity: 0.4; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+
+        i.fas {
+            color: var(--neon-green);
+            text-shadow: 0 0 5px var(--neon-green);
+        }
+    
+        .location-list {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: var(--dark-bg);
+            border-bottom: 1px solid var(--neon-green);
+            padding: 20px 0;
+            z-index: 1000;
+        }
+
+        .location-list h2 {
+            color: var(--neon-green);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px var(--neon-green);
+        }
+
+        .list-group-item {
+            background: transparent;
+            border: 1px solid var(--neon-green);
+            color: var(--neon-green);
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .list-group-item:hover {
+            background: var(--neon-green);
+            color: var(--dark-bg);
+            transform: translateX(10px);
+            text-decoration: none;
+        }
+    
+    </style>
+<link href="css/cursor-effects.css" rel="stylesheet"/></head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div class="container">
+<a class="navbar-brand" href="../index.html">Watton Tobacco</a>
+<button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../hand-stem.html">Hand Stem</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../labor-registration.html">Labor Registration</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../registrations.html">Registrations</a>
+</li>
+<li class="nav-item">
+<a class="nav-link active" href="#" id="warehousesLink">Warehouses</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#" id="centersLink">Purchase Centers</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../admin/index.html">Admin</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../staff/index.html">Staff</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../creator.html">Developer</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../contact.html">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Warehouses List -->
+<div class="location-list" id="warehousesList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Warehouses</h2>
+<div class="list-group">
+<a class="list-group-item" href="ismaila.html">
+<i class="fas fa-warehouse"></i> Ismaila Warehouse
+                        </a>
+<a class="list-group-item" href="mansabdar.html">
+<i class="fas fa-warehouse"></i> Mansabdar Warehouse
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Centers List -->
+<div class="location-list" id="centersList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Purchase Centers</h2>
+<div class="list-group">
+<a class="list-group-item" href="../centers/sher-garh.html">
+<i class="fas fa-store"></i> Sher Garh Center
+                        </a>
+<a class="list-group-item" href="../centers/maira.html">
+<i class="fas fa-store"></i> Maira Center
+                        </a>
+<a class="list-group-item" href="../centers/aman-abad.html">
+<i class="fas fa-store"></i> Aman Abad Center
+                        </a>
+<a class="list-group-item" href="../centers/bunir.html">
+<i class="fas fa-store"></i> Bunir Center
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Navbar -->
+<nav class="navbar navbar-dark">
+<div class="container">
+<span class="navbar-brand">
+<i class="fas fa-warehouse me-2"></i>Mansabdar Warehouse
+            </span>
+<div class="d-flex align-items-center">
+<span class="date-time me-3" id="currentDateTime"></span>
+<a class="btn btn-outline-light" href="../index.html">
+<i class="fas fa-home me-2"></i>Back to Home
+                </a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section">
+<div class="container">
+<h1 class="hero-title">Mansabdar Warehouse Management</h1>
+<p class="hero-subtitle">Real-time stock monitoring and management system</p>
+</div>
+</section>
+<div class="container">
+<!-- Overall Statistics -->
+<div class="row mb-4">
+<div class="col-md-3">
+<div class="card stat-card bg-primary text-white">
+<div class="card-body">
+<h5><i class="fas fa-box me-2"></i>Total Stock</h5>
+<h3 id="totalStock">0 kg</h3>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card stat-card bg-success text-white">
+<div class="card-body">
+<h5><i class="fas fa-sign-in-alt me-2"></i>Total In</h5>
+<h3 id="totalIn">0 kg</h3>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card stat-card bg-danger text-white">
+<div class="card-body">
+<h5><i class="fas fa-sign-out-alt me-2"></i>Total Out</h5>
+<h3 id="totalOut">0 kg</h3>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card stat-card bg-info text-white">
+<div class="card-body">
+<h5><i class="fas fa-building me-2"></i>Centers</h5>
+<h3>5 Active</h3>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Centers -->
+<div class="row">
+<!-- Bunir Center -->
+<div class="col-md-6">
+<div class="card center-card">
+<div class="card-header bg-primary text-white">
+<h5 class="mb-0"><i class="fas fa-store me-2"></i>Bunir Purchase Center</h5>
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-md-6">
+<label class="form-label">Stock In (kg)</label>
+<div class="input-group">
+<input class="form-control" id="bunirStockIn" placeholder="Enter amount" type="number"/>
+<button class="btn btn-success" onclick="updateStock('bunir', 'in')">
+<i class="fas fa-plus me-1"></i>Add
+                                    </button>
+</div>
+</div>
+<div class="col-md-6">
+<label class="form-label">Stock Out (kg)</label>
+<div class="input-group">
+<input class="form-control" id="bunirStockOut" placeholder="Enter amount" type="number"/>
+<button class="btn btn-danger" onclick="updateStock('bunir', 'out')">
+<i class="fas fa-minus me-1"></i>Remove
+                                    </button>
+</div>
+</div>
+</div>
+<div class="alert alert-info mt-3">
+<strong>Current Stock:</strong> <span id="bunirStock">0</span> kg
+                        </div>
+</div>
+</div>
+</div>
+<!-- Shergarh Center -->
+<div class="col-md-6">
+<div class="card center-card">
+<div class="card-header bg-success text-white">
+<h5 class="mb-0"><i class="fas fa-store me-2"></i>Shergarh Center</h5>
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-md-6">
+<label class="form-label">Stock In (kg)</label>
+<div class="input-group">
+<input class="form-control" id="shergarhStockIn" placeholder="Enter amount" type="number"/>
+<button class="btn btn-success" onclick="updateStock('shergarh', 'in')">
+<i class="fas fa-plus me-1"></i>Add
+                                    </button>
+</div>
+</div>
+<div class="col-md-6">
+<label class="form-label">Stock Out (kg)</label>
+<div class="input-group">
+<input class="form-control" id="shergarhStockOut" placeholder="Enter amount" type="number"/>
+<button class="btn btn-danger" onclick="updateStock('shergarh', 'out')">
+<i class="fas fa-minus me-1"></i>Remove
+                                    </button>
+</div>
+</div>
+</div>
+<div class="alert alert-info mt-3">
+<strong>Current Stock:</strong> <span id="shergarhStock">0</span> kg
+                        </div>
+</div>
+</div>
+</div>
+<!-- Amanabad Center -->
+<div class="col-md-6">
+<div class="card center-card">
+<div class="card-header bg-warning text-dark">
+<h5 class="mb-0"><i class="fas fa-store me-2"></i>Amanabad Center</h5>
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-md-6">
+<label class="form-label">Stock In (kg)</label>
+<div class="input-group">
+<input class="form-control" id="amanabadStockIn" placeholder="Enter amount" type="number"/>
+<button class="btn btn-success" onclick="updateStock('amanabad', 'in')">
+<i class="fas fa-plus me-1"></i>Add
+                                    </button>
+</div>
+</div>
+<div class="col-md-6">
+<label class="form-label">Stock Out (kg)</label>
+<div class="input-group">
+<input class="form-control" id="amanabadStockOut" placeholder="Enter amount" type="number"/>
+<button class="btn btn-danger" onclick="updateStock('amanabad', 'out')">
+<i class="fas fa-minus me-1"></i>Remove
+                                    </button>
+</div>
+</div>
+</div>
+<div class="alert alert-info mt-3">
+<strong>Current Stock:</strong> <span id="amanabadStock">0</span> kg
+                        </div>
+</div>
+</div>
+</div>
+<!-- Maira Center -->
+<div class="col-md-6">
+<div class="card center-card">
+<div class="card-header bg-info text-white">
+<h5 class="mb-0"><i class="fas fa-store me-2"></i>Maira Center</h5>
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-md-6">
+<label class="form-label">Stock In (kg)</label>
+<div class="input-group">
+<input class="form-control" id="mairaStockIn" placeholder="Enter amount" type="number"/>
+<button class="btn btn-success" onclick="updateStock('maira', 'in')">
+<i class="fas fa-plus me-1"></i>Add
+                                    </button>
+</div>
+</div>
+<div class="col-md-6">
+<label class="form-label">Stock Out (kg)</label>
+<div class="input-group">
+<input class="form-control" id="mairaStockOut" placeholder="Enter amount" type="number"/>
+<button class="btn btn-danger" onclick="updateStock('maira', 'out')">
+<i class="fas fa-minus me-1"></i>Remove
+                                    </button>
+</div>
+</div>
+</div>
+<div class="alert alert-info mt-3">
+<strong>Current Stock:</strong> <span id="mairaStock">0</span> kg
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+        // Initialize data structure
+        let centers = {
+            bunir: { stock: 0, totalIn: 0, totalOut: 0 },
+            shergarh: { stock: 0, totalIn: 0, totalOut: 0 },
+            amanabad: { stock: 0, totalIn: 0, totalOut: 0 },
+            maira: { stock: 0, totalIn: 0, totalOut: 0 }
+        };
+
+        // Update date and time
+        function updateDateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            };
+            document.getElementById('currentDateTime').textContent = now.toLocaleDateString('en-US', options);
+        }
+
+        // Load data from localStorage
+        function loadData() {
+            const savedData = localStorage.getItem('mansabdarData');
+            if (savedData) {
+                centers = JSON.parse(savedData);
+                updateDisplay();
+            }
+        }
+
+        // Save data to localStorage
+        function saveData() {
+            localStorage.setItem('mansabdarData', JSON.stringify(centers));
+        }
+
+        // Update stock for a center
+        function updateStock(center, type) {
+            const input = document.getElementById(center + 'Stock' + (type === 'in' ? 'In' : 'Out'));
+            const amount = parseInt(input.value) || 0;
+            
+            if (amount <= 0) {
+                showAlert('Please enter a valid amount', 'danger');
+                return;
+            }
+
+            if (type === 'out' && amount > centers[center].stock) {
+                showAlert('Not enough stock available', 'danger');
+                return;
+            }
+
+            if (type === 'in') {
+                centers[center].stock += amount;
+                centers[center].totalIn += amount;
+                showAlert(`Successfully added ${amount}kg to ${center} center`, 'success');
+            } else {
+                centers[center].stock -= amount;
+                centers[center].totalOut += amount;
+                showAlert(`Successfully removed ${amount}kg from ${center} center`, 'success');
+            }
+
+            input.value = '';
+            saveData();
+            updateDisplay();
+        }
+
+        // Show alert message
+        function showAlert(message, type) {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type} alert-dismissible fade show position-fixed top-0 end-0 m-3`;
+            alertDiv.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            `;
+            document.body.appendChild(alertDiv);
+            setTimeout(() => alertDiv.remove(), 3000);
+        }
+
+        // Update display
+        function updateDisplay() {
+            // Update center stocks
+            for (const center in centers) {
+                document.getElementById(center + 'Stock').textContent = centers[center].stock;
+            }
+
+            // Update total statistics
+            let totalStock = 0;
+            let totalIn = 0;
+            let totalOut = 0;
+
+            for (const center in centers) {
+                totalStock += centers[center].stock;
+                totalIn += centers[center].totalIn;
+                totalOut += centers[center].totalOut;
+            }
+
+            document.getElementById('totalStock').textContent = totalStock + ' kg';
+            document.getElementById('totalIn').textContent = totalIn + ' kg';
+            document.getElementById('totalOut').textContent = totalOut + ' kg';
+        }
+
+        // Initialize
+        loadData();
+        updateDateTime();
+        setInterval(updateDateTime, 60000); // Update time every minute
+
+        // Cursor tracking
+        const cursors = [];
+        const maxCursors = 10;
+
+        function createCursor(x, y) {
+            const cursor = document.createElement('div');
+            cursor.className = 'cursor-trail';
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+            document.body.appendChild(cursor);
+            return cursor;
+        }
+
+        document.addEventListener('mousemove', function(e) {
+            const cursor = createCursor(e.clientX, e.clientY);
+            cursors.push(cursor);
+
+            if (cursors.length > maxCursors) {
+                const oldCursor = cursors.shift();
+                oldCursor.remove();
+            }
+
+            setTimeout(() => {
+                cursor.remove();
+                const index = cursors.indexOf(cursor);
+                if (index > -1) {
+                    cursors.splice(index, 1);
+                }
+            }, 1000);
+        });
+    </script>
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/main.js"></script>
+<script>
+        function toggleList(listId) {
+            document.querySelectorAll('.location-list').forEach(list => {
+                if (list.id !== listId) {
+                    list.style.display = 'none';
+                }
+            });
+            const list = document.getElementById(listId);
+            list.style.display = list.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Close lists when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.location-list') && !event.target.closest('.nav-link')) {
+                document.querySelectorAll('.location-list').forEach(list => {
+                    list.style.display = 'none';
+                });
+            }
+        });
+    </script>
+<script src="js/cursor-effects.js"></script></body>
+</html>

@@ -1,0 +1,41 @@
+.location-list {
+    display: none;
+    position: absolute;
+    top: 56px; /* Height of navbar */
+    left: 0;
+    width: 100%;
+    background-color: #343a40;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+    padding: 1rem 0;
+}
+
+.location-list.show {
+    display: block;
+}
+
+.location-list h2 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.location-list .list-group-item {
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.85);
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.location-list .list-group-item:hover {
+    background: #2a5298;
+    color: white;
+    padding-left: 1.5rem;
+}
+
+.location-list .fas {
+    margin-right: 10px;
+}

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Careers - Watton Tobacco Company</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+        .hero {
+            background-image: url('images/tobacco-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .form-section {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            pointer-events: none;
+            background: var(--neon-green);
+            box-shadow: 0 0 20px var(--neon-green),
+                       0 0 40px var(--neon-green),
+                       0 0 60px var(--neon-green);
+            animation: pulse 1s infinite;
+            z-index: 9999;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.5); opacity: 0.4; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+    
+        .location-list {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: var(--dark-bg);
+            border-bottom: 1px solid var(--neon-green);
+            padding: 20px 0;
+            z-index: 1000;
+        }
+
+        .location-list h2 {
+            color: var(--neon-green);
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px var(--neon-green);
+        }
+
+        .list-group-item {
+            background: transparent;
+            border: 1px solid var(--neon-green);
+            color: var(--neon-green);
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .list-group-item:hover {
+            background: var(--neon-green);
+            color: var(--dark-bg);
+            transform: translateX(10px);
+            text-decoration: none;
+        }
+    
+    </style>
+<link href="css/cursor-effects.css" rel="stylesheet"/></head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div class="container">
+<a class="navbar-brand" href="./index.html">Watton Tobacco</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link" href="./index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./hand-stem.html">Hand Stem</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./labor-registration.html">Labor Registration</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./registrations.html">Registrations</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#" onclick="toggleList('warehousesList')">Warehouses</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#" onclick="toggleList('centersList')">Purchase Centers</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./admin/index.html">Admin</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./staff/index.html">Staff</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./creator.html">Developer</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./contact.html">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Warehouses List -->
+<div class="location-list" id="warehousesList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Warehouses</h2>
+<div class="list-group">
+<a class="list-group-item" href="./warehouses/ismaila.html">
+<i class="fas fa-warehouse"></i> Ismaila Warehouse
+                    </a>
+<a class="list-group-item" href="./warehouses/mansabdar.html">
+<i class="fas fa-warehouse"></i> Mansabdar Warehouse
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Centers List -->
+<div class="location-list" id="centersList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Purchase Centers</h2>
+<div class="list-group">
+<a class="list-group-item" href="./centers/sher-garh.html">
+<i class="fas fa-store"></i> Sher Garh Center
+                    </a>
+<a class="list-group-item" href="./centers/maira.html">
+<i class="fas fa-store"></i> Maira Center
+                    </a>
+<a class="list-group-item" href="./centers/aman-abad.html">
+<i class="fas fa-store"></i> Aman Abad Center
+                    </a>
+<a class="list-group-item" href="./centers/bunir.html">
+<i class="fas fa-store"></i> Bunir Center
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Warehouses List -->
+<div class="location-list" id="warehousesList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Warehouses</h2>
+<div class="list-group">
+<a class="list-group-item" href=".warehouses/ismaila.html">
+<i class="fas fa-warehouse"></i> Ismaila Warehouse
+                    </a>
+<a class="list-group-item" href=".warehouses/mansabdar.html">
+<i class="fas fa-warehouse"></i> Mansabdar Warehouse
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Centers List -->
+<div class="location-list" id="centersList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Purchase Centers</h2>
+<div class="list-group">
+<a class="list-group-item" href=".centers/sher-garh.html">
+<i class="fas fa-store"></i> Sher Garh Center
+                    </a>
+<a class="list-group-item" href=".centers/maira.html">
+<i class="fas fa-store"></i> Maira Center
+                    </a>
+<a class="list-group-item" href=".centers/aman-abad.html">
+<i class="fas fa-store"></i> Aman Abad Center
+                    </a>
+<a class="list-group-item" href=".centers/bunir.html">
+<i class="fas fa-store"></i> Bunir Center
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Warehouses List -->
+<div class="location-list" id="warehousesList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Warehouses</h2>
+<div class="list-group">
+<a class="list-group-item" href=".warehouses/ismaila.html">
+<i class="fas fa-warehouse"></i> Ismaila Warehouse
+                    </a>
+<a class="list-group-item" href=".warehouses/mansabdar.html">
+<i class="fas fa-warehouse"></i> Mansabdar Warehouse
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Purchase Centers List -->
+<div class="location-list" id="centersList">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<h2>Purchase Centers</h2>
+<div class="list-group">
+<a class="list-group-item" href=".centers/sher-garh.html">
+<i class="fas fa-store"></i> Sher Garh Center
+                    </a>
+<a class="list-group-item" href=".centers/maira.html">
+<i class="fas fa-store"></i> Maira Center
+                    </a>
+<a class="list-group-item" href=".centers/aman-abad.html">
+<i class="fas fa-store"></i> Aman Abad Center
+                    </a>
+<a class="list-group-item" href=".centers/bunir.html">
+<i class="fas fa-store"></i> Bunir Center
+                    </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="hero">
+<div class="container text-center">
+<h1>Join Our Team</h1>
+<p class="lead">Build Your Career with Watton Tobacco Company</p>
+</div>
+</section>
+<!-- Job Application Form -->
+<section class="py-5">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<div class="form-section">
+<h2 class="text-center mb-4">Job Application Form</h2>
+<form id="jobApplicationForm">
+<!-- Personal Information -->
+<div class="mb-4">
+<h4>Personal Information</h4>
+<div class="row">
+<div class="col-md-6 mb-3">
+<label class="form-label" for="firstName">First Name</label>
+<input class="form-control" id="firstName" required="" type="text"/>
+</div>
+<div class="col-md-6 mb-3">
+<label class="form-label" for="lastName">Last Name</label>
+<input class="form-control" id="lastName" required="" type="text"/>
+</div>
+</div>
+<div class="mb-3">
+<label class="form-label" for="email">Email Address</label>
+<input class="form-control" id="email" required="" type="email"/>
+</div>
+<div class="mb-3">
+<label class="form-label" for="phone">Phone Number</label>
+<input class="form-control" id="phone" required="" type="tel"/>
+</div>
+</div>
+<!-- Job Preferences -->
+<div class="mb-4">
+<h4>Job Preferences</h4>
+<div class="mb-3">
+<label class="form-label" for="position">Position Applied For</label>
+<select class="form-select" id="position" required="">
+<option value="">Select Position</option>
+<option value="general_manager">General Manager</option>
+<option value="operations_manager">Operations Manager</option>
+<option value="admin_clerk">Administrative Clerk</option>
+<option value="data_entry_clerk">Data Entry Clerk</option>
+<option value="inventory_clerk">Inventory Clerk</option>
+<option value="accounts_clerk">Accounts Clerk</option>
+<option value="warehouse_manager">Warehouse Manager</option>
+<option value="logistics_coordinator">Logistics Coordinator</option>
+<option value="quality_control">Quality Control Specialist</option>
+<option value="forklift_operator">Forklift Operator</option>
+<option value="security_officer">Security Officer</option>
+</select>
+</div>
+<div class="mb-3">
+<label class="form-label" for="location">Preferred Location</label>
+<select class="form-select" id="location" required="">
+<option value="">Select Location</option>
+<option value="ismaila">Ismaila Warehouse</option>
+<option value="mansabdar">Mansabdar Warehouse</option>
+<option value="headquarters">Headquarters</option>
+</select>
+</div>
+</div>
+<!-- Experience -->
+<div class="mb-4">
+<h4>Experience</h4>
+<div class="mb-3">
+<label class="form-label" for="experience">Years of Experience</label>
+<input class="form-control" id="experience" min="0" required="" type="number"/>
+</div>
+<div class="mb-3">
+<label class="form-label" for="skills">Key Skills</label>
+<textarea class="form-control" id="skills" required="" rows="3"></textarea>
+</div>
+</div>
+<!-- Resume Upload -->
+<div class="mb-4">
+<h4>Documents</h4>
+<div class="mb-3">
+<label class="form-label" for="resume">Upload Resume/CV</label>
+<input accept=".pdf,.doc,.docx" class="form-control" id="resume" required="" type="file"/>
+</div>
+<div class="mb-3">
+<label class="form-label" for="coverLetter">Cover Letter (Optional)</label>
+<textarea class="form-control" id="coverLetter" rows="4"></textarea>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="text-center">
+<button class="btn btn-primary btn-lg" type="submit">Submit Application</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer py-4 bg-dark text-white">
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<h5>Contact Us</h5>
+<p>Email: careers@wattontobacco.com</p>
+</div>
+<div class="col-md-6 text-md-right">
+<h5>Follow Us</h5>
+<a class="text-white mr-2" href="#"><i class="fab fa-facebook"></i></a>
+<a class="text-white mr-2" href="#"><i class="fab fa-twitter"></i></a>
+<a class="text-white" href="#"><i class="fab fa-linkedin"></i></a>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/cursor-effects.js"></script>
+<script>
+        document.getElementById('jobApplicationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                position: document.getElementById('position').value,
+                location: document.getElementById('location').value,
+                experience: document.getElementById('experience').value,
+                skills: document.getElementById('skills').value,
+                coverLetter: document.getElementById('coverLetter').value,
+                status: 'pending',
+                submittedAt: new Date().toISOString()
+            };
+
+            // Get existing applications or initialize empty array
+            const applications = JSON.parse(localStorage.getItem('jobApplications')) || [];
+            
+            // Add new application
+            applications.push(formData);
+            
+            // Save to localStorage
+            localStorage.setItem('jobApplications', JSON.stringify(applications));
+
+            // Show success message with Bootstrap modal
+            const modalHtml = `
+                <div class="modal fade" id="successModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header bg-success text-white">
+                                <h5 class="modal-title">Application Submitted Successfully!</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Thank you for your application! Our management team will review your information and contact you soon.</p>
+                                <p>Your application is currently <strong>pending review</strong>.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Add modal to body if it doesn't exist
+            if (!document.getElementById('successModal')) {
+                document.body.insertAdjacentHTML('beforeend', modalHtml);
+            }
+
+            // Show the modal
+            const modal = new bootstrap.Modal(document.getElementById('successModal'));
+            modal.show();
+
+            // Reset form
+            this.reset();
+        });
+    </script>
+<script>
+        function toggleList(listId) {
+            document.querySelectorAll('.location-list').forEach(list => {
+                if (list.id !== listId) {
+                    list.style.display = 'none';
+                }
+            });
+            const list = document.getElementById(listId);
+            list.style.display = list.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Close lists when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.location-list') && !event.target.closest('.nav-link')) {
+                document.querySelectorAll('.location-list').forEach(list => {
+                    list.style.display = 'none';
+                });
+            }
+        });
+    </script>
+<script src="js/cursor-effects.js"></script></body>
+</html>
